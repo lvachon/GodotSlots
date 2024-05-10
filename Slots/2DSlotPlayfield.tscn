@@ -1,0 +1,544 @@
+[gd_scene load_steps=27 format=3 uid="uid://bux40q1iavve5"]
+
+[ext_resource type="Texture2D" uid="uid://biu6mvvgbb0da" path="res://playfield0001.png" id="1_dg5pr"]
+[ext_resource type="Texture2D" uid="uid://cmpu8sy45rol" path="res://reelback0001.png" id="2_e433w"]
+[ext_resource type="Script" path="res://SpinButton.gd" id="3_1adoc"]
+[ext_resource type="Script" path="res://DynamicReel.gd" id="3_tlvy4"]
+[ext_resource type="Script" path="res://Banker.gd" id="4_eeqtu"]
+[ext_resource type="Script" path="res://BetLabel.gd" id="6_83vyq"]
+[ext_resource type="Script" path="res://WinLine.gd" id="6_gooki"]
+[ext_resource type="LabelSettings" uid="uid://47k0yagabjec" path="res://SmallMoneyLabel.tres" id="6_uiywx"]
+[ext_resource type="Script" path="res://PrizeLabel.gd" id="7_jpdtg"]
+[ext_resource type="Texture2D" uid="uid://cw2w05glymk6l" path="res://M27 7-9 2021 combo.jpg" id="7_xdvbx"]
+[ext_resource type="Script" path="res://SlowSpin.gd" id="8_5nx8u"]
+[ext_resource type="LabelSettings" uid="uid://dio5w103ng3m3" path="res://MoneyLabel.tres" id="10_1g0tk"]
+[ext_resource type="Script" path="res://SoundButton.gd" id="11_yrt1v"]
+[ext_resource type="Script" path="res://FreeGamesIndicator.gd" id="12_ikp1j"]
+[ext_resource type="AudioStream" uid="uid://c6e5hu276hn1b" path="res://sound/hic.ogg" id="13_o51pn"]
+[ext_resource type="AudioStream" uid="uid://b86e41ymwytky" path="res://sound/a.ogg" id="14_1mb4b"]
+[ext_resource type="AudioStream" uid="uid://ps33xxnmfvlq" path="res://sound/g.ogg" id="15_t7xak"]
+[ext_resource type="AudioStream" uid="uid://lqxxak5yd1i7" path="res://sound/e.ogg" id="16_7gnow"]
+[ext_resource type="AudioStream" uid="uid://bju1mj83bmrwr" path="res://sound/c.ogg" id="17_r3oam"]
+[ext_resource type="AudioStream" uid="uid://cgrc8a1djucwq" path="res://sound/trill.ogg" id="18_qtp70"]
+[ext_resource type="PackedScene" uid="uid://b3btttp6t2weo" path="res://PayTable.tscn" id="20_7hycx"]
+[ext_resource type="Script" path="res://FreeGamesPanel.gd" id="21_kutn2"]
+[ext_resource type="Script" path="res://HistoryGraph.gd" id="23_yvi4t"]
+
+[sub_resource type="SystemFont" id="SystemFont_f6mpx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kahk"]
+font_size = 42
+font_color = Color(0.86, 1, 0.862333, 1)
+outline_size = 8
+outline_color = Color(2.63215e-08, 0.0968611, 0.0150417, 1)
+shadow_size = 16
+shadow_color = Color(0, 0, 0, 0.160784)
+shadow_offset = Vector2(7.27, 4.83)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n771l"]
+bg_color = Color(0.054902, 0.054902, 0.054902, 0.921569)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ReelCanvas" type="CanvasGroup" parent="."]
+scale = Vector2(0.4, 0.4)
+
+[node name="Playfield" type="Sprite2D" parent="ReelCanvas"]
+z_index = 2
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_dg5pr")
+
+[node name="Reelback" type="Sprite2D" parent="ReelCanvas"]
+z_index = -1
+scale = Vector2(1.175, 1.175)
+texture = ExtResource("2_e433w")
+
+[node name="Background" type="CanvasGroup" parent="."]
+
+[node name="SpinButton" type="Button" parent="Background"]
+z_index = 2
+offset_left = 413.0
+offset_top = 231.0
+offset_right = 468.0
+offset_bottom = 268.0
+theme_override_font_sizes/font_size = 41
+text = "SPIN"
+script = ExtResource("3_1adoc")
+
+[node name="BalanceLabel" type="Label" parent="Background"]
+z_index = 2
+offset_left = 127.0
+offset_top = 232.0
+offset_right = 383.0
+offset_bottom = 311.0
+text = "Cash: 10000"
+label_settings = ExtResource("6_uiywx")
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("4_eeqtu")
+
+[node name="BetLabel" type="Label" parent="Background"]
+z_index = 2
+offset_left = -381.0
+offset_top = 231.0
+offset_right = -244.0
+offset_bottom = 308.0
+text = "Bet: 25"
+label_settings = ExtResource("6_uiywx")
+vertical_alignment = 1
+script = ExtResource("6_83vyq")
+
+[node name="PrizeLabel" type="Label" parent="Background" node_paths=PackedStringArray("trillSound")]
+z_index = 2
+offset_left = -60.0
+offset_top = 234.0
+offset_right = 60.0
+offset_bottom = 312.0
+text = "Prize: 0"
+label_settings = ExtResource("6_uiywx")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_jpdtg")
+trillSound = NodePath("../../Sounds/Trill")
+
+[node name="Polygon2D" type="Polygon2D" parent="Background"]
+z_index = 1
+texture = ExtResource("7_xdvbx")
+texture_offset = Vector2(677.17, 667.81)
+texture_scale = Vector2(1.77, 1.77)
+texture_rotation = 3.95841
+polygon = PackedVector2Array(-580, -327, 577, -327, 577, 327, -580, 327, -580, -327, -406, 235, 408, 244, 412, -250, -411, -261, -406, 233)
+script = ExtResource("8_5nx8u")
+
+[node name="BetUp" type="Button" parent="Background"]
+z_index = 2
+offset_left = -226.0
+offset_top = 245.0
+offset_right = -180.0
+offset_bottom = 292.0
+theme_override_fonts/font = SubResource("SystemFont_f6mpx")
+theme_override_font_sizes/font_size = 28
+text = "+"
+
+[node name="BetUp2" type="Button" parent="Background"]
+z_index = 2
+offset_left = -455.0
+offset_top = 247.0
+offset_right = -409.0
+offset_bottom = 294.0
+theme_override_fonts/font = SubResource("SystemFont_f6mpx")
+theme_override_font_sizes/font_size = 28
+text = "-"
+
+[node name="Title" type="Label" parent="Background"]
+z_index = 2
+offset_left = -377.0
+offset_top = -311.0
+offset_right = 378.0
+offset_bottom = -233.0
+text = "Periodic Winnings"
+label_settings = ExtResource("10_1g0tk")
+horizontal_alignment = 1
+
+[node name="HelpButton" type="Button" parent="Background"]
+z_index = 2
+offset_left = 432.0
+offset_top = -293.0
+offset_right = 491.0
+offset_bottom = -235.0
+theme_override_font_sizes/font_size = 36
+text = "?"
+
+[node name="SoundButton" type="Button" parent="Background"]
+z_index = 2
+offset_left = -486.0
+offset_top = -293.0
+offset_right = -427.0
+offset_bottom = -235.0
+theme_override_font_sizes/font_size = 36
+text = "🔊"
+script = ExtResource("11_yrt1v")
+
+[node name="Free Games" type="Label" parent="Background"]
+z_index = 2
+offset_left = 415.0
+offset_top = 188.0
+offset_right = 514.0
+offset_bottom = 211.0
+text = "Free Games:
+"
+horizontal_alignment = 1
+
+[node name="Free Games2" type="Label" parent="Background"]
+z_index = 2
+offset_left = 414.0
+offset_top = 205.0
+offset_right = 513.0
+offset_bottom = 228.0
+text = "0
+"
+horizontal_alignment = 1
+script = ExtResource("12_ikp1j")
+
+[node name="DynamicReel0" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield", "tickSound")]
+position = Vector2(-310, 0)
+scale = Vector2(0.325, 0.325)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(1, 1.1)
+tickSound = NodePath("../Sounds/HiC")
+startVel = 25.0
+stopPosition = -2.0
+
+[node name="DynamicReel1" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield", "tickSound")]
+position = Vector2(-155, 0)
+scale = Vector2(0.325, 0.325)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+tickSound = NodePath("../Sounds/A")
+tickOffset = 1
+startVel = 25.0
+spinTime = 1.0
+stopPosition = -2.0
+
+[node name="DynamicReel2" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield", "tickSound")]
+scale = Vector2(0.325, 0.325)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+tickSound = NodePath("../Sounds/G")
+tickOffset = 2
+startVel = 25.0
+spinTime = 1.5
+stopPosition = -2.0
+
+[node name="DynamicReel3" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield", "tickSound")]
+position = Vector2(155, 0)
+scale = Vector2(0.325, 0.325)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+tickSound = NodePath("../Sounds/E")
+tickOffset = 3
+startVel = 25.0
+spinTime = 2.0
+stopPosition = -2.0
+
+[node name="DynamicReel4" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield", "tickSound")]
+position = Vector2(310, 0)
+scale = Vector2(0.325, 0.325)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+tickSound = NodePath("../Sounds/C")
+tickOffset = 4
+startVel = 25.0
+spinTime = 2.5
+stopPosition = -2.0
+
+[node name="WinLines" type="CanvasGroup" parent="."]
+z_index = 3
+
+[node name="WinLine0" type="Line2D" parent="WinLines" node_paths=PackedStringArray("winChime")]
+position = Vector2(0, -25.445)
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 12.935
+default_color = Color(0.675735, 0.00256094, 0.908115, 1)
+script = ExtResource("6_gooki")
+flashSpeed = 6
+winChime = NodePath("../../Sounds/HiC")
+
+[node name="PrizeAmount" type="Label" parent="WinLines/WinLine0"]
+z_index = 2
+offset_left = -539.0
+offset_top = -186.555
+offset_right = -439.0
+offset_bottom = -118.555
+text = "1000"
+label_settings = SubResource("LabelSettings_0kahk")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="WinLines/WinLine0"]
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 5.0
+default_color = Color(0.774998, 0.656519, 1, 1)
+
+[node name="WinLine1" type="Line2D" parent="WinLines" node_paths=PackedStringArray("winChime")]
+position = Vector2(0, 64)
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 12.935
+default_color = Color(0.675735, 0.00256094, 0.908115, 1)
+script = ExtResource("6_gooki")
+flashSpeed = 6
+winChime = NodePath("../../Sounds/A")
+
+[node name="PrizeAmount2" type="Label" parent="WinLines/WinLine1"]
+z_index = 2
+offset_left = -539.0
+offset_top = -187.555
+offset_right = -439.0
+offset_bottom = -119.555
+text = "1000"
+label_settings = SubResource("LabelSettings_0kahk")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Line2D2" type="Line2D" parent="WinLines/WinLine1"]
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 5.0
+default_color = Color(0.774998, 0.656519, 1, 1)
+
+[node name="WinLine2" type="Line2D" parent="WinLines" node_paths=PackedStringArray("winChime")]
+position = Vector2(0, 150)
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 12.935
+default_color = Color(0.675735, 0.00256094, 0.908115, 1)
+script = ExtResource("6_gooki")
+flashSpeed = 6
+winChime = NodePath("../../Sounds/G")
+
+[node name="PrizeAmount3" type="Label" parent="WinLines/WinLine2"]
+z_index = 2
+offset_left = -541.0
+offset_top = -189.555
+offset_right = -441.0
+offset_bottom = -121.555
+text = "1000"
+label_settings = SubResource("LabelSettings_0kahk")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Line2D3" type="Line2D" parent="WinLines/WinLine2"]
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 5.0
+default_color = Color(0.774998, 0.656519, 1, 1)
+
+[node name="WinLine3" type="Line2D" parent="WinLines" node_paths=PackedStringArray("winChime")]
+position = Vector2(0, 238.035)
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 12.935
+default_color = Color(0.675735, 0.00256094, 0.908115, 1)
+script = ExtResource("6_gooki")
+flashSpeed = 6
+winChime = NodePath("../../Sounds/E")
+
+[node name="PrizeAmount4" type="Label" parent="WinLines/WinLine3"]
+z_index = 2
+offset_left = -539.0
+offset_top = -185.555
+offset_right = -439.0
+offset_bottom = -117.555
+text = "1000"
+label_settings = SubResource("LabelSettings_0kahk")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Line2D4" type="Line2D" parent="WinLines/WinLine3"]
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 5.0
+default_color = Color(0.774998, 0.656519, 1, 1)
+
+[node name="WinLine4" type="Line2D" parent="WinLines" node_paths=PackedStringArray("winChime")]
+position = Vector2(0, 326.875)
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 12.935
+default_color = Color(0.675735, 0.00256094, 0.908115, 1)
+script = ExtResource("6_gooki")
+flashSpeed = 6
+winChime = NodePath("../../Sounds/C")
+
+[node name="PrizeAmount5" type="Label" parent="WinLines/WinLine4"]
+z_index = 2
+offset_left = -539.0
+offset_top = -185.555
+offset_right = -439.0
+offset_bottom = -117.555
+text = "1000"
+label_settings = SubResource("LabelSettings_0kahk")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Line2D5" type="Line2D" parent="WinLines/WinLine4"]
+points = PackedVector2Array(-400, -150, 400, -150)
+width = 5.0
+default_color = Color(0.774998, 0.656519, 1, 1)
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="HiC" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("13_o51pn")
+volume_db = -3.0
+
+[node name="A" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("14_1mb4b")
+volume_db = -3.0
+
+[node name="G" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("15_t7xak")
+volume_db = -3.0
+
+[node name="E" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("16_7gnow")
+volume_db = -3.0
+
+[node name="C" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("17_r3oam")
+volume_db = -3.0
+
+[node name="Trill" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("18_qtp70")
+volume_db = -3.0
+
+[node name="HelpPanel" type="PopupPanel" parent="."]
+initial_position = 1
+size = Vector2i(865, 615)
+
+[node name="Node2D" parent="HelpPanel" instance=ExtResource("20_7hycx")]
+
+[node name="Control" type="Control" parent="HelpPanel"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 861.0
+offset_bottom = 611.0
+
+[node name="Button" type="Button" parent="HelpPanel/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -167.5
+offset_top = -73.235
+offset_right = 167.5
+offset_bottom = 0.85498
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Back to game"
+
+[node name="FreeGamesPanel" type="Panel" parent="."]
+visible = false
+z_index = 3
+offset_left = -279.0
+offset_top = -199.0
+offset_right = 281.0
+offset_bottom = 199.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n771l")
+script = ExtResource("21_kutn2")
+
+[node name="FreeGamesPL" type="Label" parent="FreeGamesPanel"]
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 71
+text = "Free Games!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FreeGamesPL2" type="Label" parent="FreeGamesPanel"]
+layout_mode = 0
+offset_top = 199.05
+offset_right = 560.0
+offset_bottom = 397.049
+theme_override_font_sizes/font_size = 71
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HistoryGraph" type="Node2D" parent="."]
+z_index = 3
+position = Vector2(439.115, -230.09)
+script = ExtResource("23_yvi4t")
+width = 80
+height = 420
+
+[connection signal="pressed" from="Background/SpinButton" to="Background/BalanceLabel" method="onSpinPressed"]
+[connection signal="setSpinning" from="Background/SpinButton" to="Background/BalanceLabel" method="setSpinning"]
+[connection signal="spin0Ready" from="Background/SpinButton" to="DynamicReel0" method="trySpin"]
+[connection signal="spin1Ready" from="Background/SpinButton" to="DynamicReel1" method="trySpin"]
+[connection signal="spin2Ready" from="Background/SpinButton" to="DynamicReel2" method="trySpin"]
+[connection signal="spin3Ready" from="Background/SpinButton" to="DynamicReel3" method="trySpin"]
+[connection signal="spin4Ready" from="Background/SpinButton" to="DynamicReel4" method="trySpin"]
+[connection signal="spinResultReady" from="Background/SpinButton" to="Background/BalanceLabel" method="onSpinResultReady"]
+[connection signal="doHistory" from="Background/BalanceLabel" to="HistoryGraph" method="onResult"]
+[connection signal="doSpin" from="Background/BalanceLabel" to="Background/SpinButton" method="computeNextSpin"]
+[connection signal="sendBet" from="Background/BalanceLabel" to="Background/BetLabel" method="setBet"]
+[connection signal="showRow1Win" from="Background/BalanceLabel" to="DynamicReel0" method="showWin0"]
+[connection signal="showRow1Win" from="Background/BalanceLabel" to="DynamicReel1" method="showWin0"]
+[connection signal="showRow1Win" from="Background/BalanceLabel" to="DynamicReel2" method="showWin0"]
+[connection signal="showRow1Win" from="Background/BalanceLabel" to="DynamicReel3" method="showWin0"]
+[connection signal="showRow1Win" from="Background/BalanceLabel" to="DynamicReel4" method="showWin0"]
+[connection signal="showRow1Win" from="Background/BalanceLabel" to="WinLines/WinLine0" method="showPrize"]
+[connection signal="showRow2Win" from="Background/BalanceLabel" to="DynamicReel0" method="showWin1"]
+[connection signal="showRow2Win" from="Background/BalanceLabel" to="DynamicReel1" method="showWin1"]
+[connection signal="showRow2Win" from="Background/BalanceLabel" to="DynamicReel2" method="showWin1"]
+[connection signal="showRow2Win" from="Background/BalanceLabel" to="DynamicReel3" method="showWin1"]
+[connection signal="showRow2Win" from="Background/BalanceLabel" to="DynamicReel4" method="showWin1"]
+[connection signal="showRow2Win" from="Background/BalanceLabel" to="WinLines/WinLine1" method="showPrize"]
+[connection signal="showRow3Win" from="Background/BalanceLabel" to="DynamicReel0" method="showWin2"]
+[connection signal="showRow3Win" from="Background/BalanceLabel" to="DynamicReel1" method="showWin2"]
+[connection signal="showRow3Win" from="Background/BalanceLabel" to="DynamicReel2" method="showWin2"]
+[connection signal="showRow3Win" from="Background/BalanceLabel" to="DynamicReel3" method="showWin2"]
+[connection signal="showRow3Win" from="Background/BalanceLabel" to="DynamicReel4" method="showWin2"]
+[connection signal="showRow3Win" from="Background/BalanceLabel" to="WinLines/WinLine2" method="showPrize"]
+[connection signal="showRow4Win" from="Background/BalanceLabel" to="DynamicReel0" method="showWin3"]
+[connection signal="showRow4Win" from="Background/BalanceLabel" to="DynamicReel1" method="showWin3"]
+[connection signal="showRow4Win" from="Background/BalanceLabel" to="DynamicReel2" method="showWin3"]
+[connection signal="showRow4Win" from="Background/BalanceLabel" to="DynamicReel3" method="showWin3"]
+[connection signal="showRow4Win" from="Background/BalanceLabel" to="DynamicReel4" method="showWin3"]
+[connection signal="showRow4Win" from="Background/BalanceLabel" to="WinLines/WinLine3" method="showPrize"]
+[connection signal="showRow5Win" from="Background/BalanceLabel" to="DynamicReel0" method="showWin4"]
+[connection signal="showRow5Win" from="Background/BalanceLabel" to="DynamicReel1" method="showWin4"]
+[connection signal="showRow5Win" from="Background/BalanceLabel" to="DynamicReel2" method="showWin4"]
+[connection signal="showRow5Win" from="Background/BalanceLabel" to="DynamicReel3" method="showWin4"]
+[connection signal="showRow5Win" from="Background/BalanceLabel" to="DynamicReel4" method="showWin4"]
+[connection signal="showRow5Win" from="Background/BalanceLabel" to="WinLines/WinLine4" method="showPrize"]
+[connection signal="showWinnings" from="Background/BalanceLabel" to="Background/PrizeLabel" method="showPrize"]
+[connection signal="signalFreeGames" from="Background/BalanceLabel" to="Background/Free Games2" method="onSignalFreeGames"]
+[connection signal="signalFreeGames" from="Background/BalanceLabel" to="FreeGamesPanel" method="onSignalFreeGames"]
+[connection signal="stopAnims" from="Background/BalanceLabel" to="Background/PrizeLabel" method="stopAnim"]
+[connection signal="stopAnims" from="Background/BalanceLabel" to="WinLines/WinLine0" method="stopFlashing"]
+[connection signal="stopAnims" from="Background/BalanceLabel" to="WinLines/WinLine1" method="stopFlashing"]
+[connection signal="stopAnims" from="Background/BalanceLabel" to="WinLines/WinLine2" method="stopFlashing"]
+[connection signal="stopAnims" from="Background/BalanceLabel" to="WinLines/WinLine3" method="stopFlashing"]
+[connection signal="stopAnims" from="Background/BalanceLabel" to="WinLines/WinLine4" method="stopFlashing"]
+[connection signal="updateFreeGames" from="Background/BalanceLabel" to="Background/Free Games2" method="onUpdateFreeGames"]
+[connection signal="pressed" from="Background/BetUp" to="Background/BalanceLabel" method="increaseBet"]
+[connection signal="pressed" from="Background/BetUp2" to="Background/BalanceLabel" method="decreaseBet"]
+[connection signal="pressed" from="Background/HelpButton" to="HelpPanel" method="show"]
+[connection signal="pressed" from="Background/SoundButton" to="Background/SoundButton" method="setVolume"]
+[connection signal="setAllVolumes" from="Background/SoundButton" to="Sounds/HiC" method="set_volume_db"]
+[connection signal="setAllVolumes" from="Background/SoundButton" to="Sounds/A" method="set_volume_db"]
+[connection signal="setAllVolumes" from="Background/SoundButton" to="Sounds/G" method="set_volume_db"]
+[connection signal="setAllVolumes" from="Background/SoundButton" to="Sounds/E" method="set_volume_db"]
+[connection signal="setAllVolumes" from="Background/SoundButton" to="Sounds/C" method="set_volume_db"]
+[connection signal="setAllVolumes" from="Background/SoundButton" to="Sounds/Trill" method="set_volume_db"]
+[connection signal="spinDone" from="DynamicReel0" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel1" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel2" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel3" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel4" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="animDone" from="WinLines/WinLine0" to="Background/BalanceLabel" method="winAnimDone"]
+[connection signal="animDone" from="WinLines/WinLine1" to="Background/BalanceLabel" method="winAnimDone"]
+[connection signal="animDone" from="WinLines/WinLine2" to="Background/BalanceLabel" method="winAnimDone"]
+[connection signal="animDone" from="WinLines/WinLine3" to="Background/BalanceLabel" method="winAnimDone"]
+[connection signal="animDone" from="WinLines/WinLine4" to="Background/BalanceLabel" method="winAnimDone"]
+[connection signal="pressed" from="HelpPanel/Control/Button" to="HelpPanel" method="hide"]
+[connection signal="animDone" from="FreeGamesPanel" to="Background/BalanceLabel" method="winAnimDone"]

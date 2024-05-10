@@ -1,0 +1,147 @@
+[gd_scene load_steps=7 format=3 uid="uid://bux40q1iavve5"]
+
+[ext_resource type="Texture2D" uid="uid://biu6mvvgbb0da" path="res://playfield0001.png" id="1_dg5pr"]
+[ext_resource type="Texture2D" uid="uid://cmpu8sy45rol" path="res://reelback0001.png" id="2_e433w"]
+[ext_resource type="Script" path="res://SpinButton.gd" id="3_1adoc"]
+[ext_resource type="Script" path="res://DynamicReel.gd" id="3_tlvy4"]
+[ext_resource type="Script" path="res://Banker.gd" id="4_eeqtu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vv7tx"]
+font_size = 106
+font_color = Color(0.86, 1, 0.862333, 1)
+outline_size = 8
+outline_color = Color(2.63215e-08, 0.0968611, 0.0150417, 1)
+shadow_size = 16
+shadow_color = Color(0, 0, 0, 0.160784)
+shadow_offset = Vector2(7.27, 4.83)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ReelCanvas" type="CanvasGroup" parent="."]
+scale = Vector2(0.4, 0.4)
+
+[node name="Playfield" type="Sprite2D" parent="ReelCanvas"]
+visible = false
+z_index = 2
+texture = ExtResource("1_dg5pr")
+
+[node name="Reelback" type="Sprite2D" parent="ReelCanvas"]
+visible = false
+z_index = -1
+texture = ExtResource("2_e433w")
+
+[node name="Background" type="CanvasGroup" parent="."]
+
+[node name="SpinButton" type="Button" parent="Background"]
+z_index = 2
+offset_left = 440.0
+offset_top = 122.0
+offset_right = 504.0
+offset_bottom = 186.0
+script = ExtResource("3_1adoc")
+
+[node name="Polygon2D" type="Polygon2D" parent="Background"]
+color = Color(0.525101, 0.525101, 0.525101, 1)
+polygon = PackedVector2Array(-587, -327, -373, -328, -373, 340, -588, 339)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Background"]
+position = Vector2(961, -4)
+color = Color(0.423651, 0.423651, 0.423651, 1)
+polygon = PackedVector2Array(-587, -327, -373, -328, -373, 340, -588, 339)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Background"]
+z_index = 1
+position = Vector2(961, -4)
+color = Color(0.412152, 0.412152, 0.412152, 1)
+polygon = PackedVector2Array(-1358, -331, -570, -328, -567, -205, -1359, -208)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Background"]
+z_index = 1
+position = Vector2(966, 540)
+color = Color(0.359069, 0.359069, 0.359069, 1)
+polygon = PackedVector2Array(-1358, -331, -570, -328, -567, -205, -1359, -208)
+
+[node name="BalanceLabel" type="Label" parent="Background"]
+z_index = 1
+offset_left = -151.0
+offset_top = -358.0
+offset_right = 154.0
+offset_bottom = -212.0
+text = "$1000"
+label_settings = SubResource("LabelSettings_vv7tx")
+script = ExtResource("4_eeqtu")
+
+[node name="DynamicReel0" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield")]
+visible = false
+position = Vector2(-264, -2.935)
+scale = Vector2(0.345, 0.345)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(1, 1.1)
+startVel = 25.0
+spinTime = 1.5
+stopPosition = -2.0
+
+[node name="DynamicReel1" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield")]
+visible = false
+position = Vector2(-132, -2.935)
+scale = Vector2(0.345, 0.345)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+startVel = 25.0
+spinTime = 1.75
+stopPosition = -2.0
+
+[node name="DynamicReel2" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield")]
+visible = false
+position = Vector2(0, -2.935)
+scale = Vector2(0.345, 0.345)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+startVel = 25.0
+spinTime = 2.0
+stopPosition = -2.0
+
+[node name="DynamicReel3" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield")]
+visible = false
+position = Vector2(132, -2.935)
+scale = Vector2(0.345, 0.345)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+startVel = 25.0
+spinTime = 2.25
+stopPosition = -2.0
+
+[node name="DynamicReel4" type="CanvasGroup" parent="." node_paths=PackedStringArray("playfield")]
+visible = false
+position = Vector2(264, -2.935)
+scale = Vector2(0.345, 0.345)
+script = ExtResource("3_tlvy4")
+playfield = NodePath("../ReelCanvas/Playfield")
+reelsize = null
+spriteScale = Vector2(0, 0)
+startVel = 25.0
+spinTime = 2.5
+stopPosition = -2.0
+
+[connection signal="pressed" from="Background/SpinButton" to="Background/BalanceLabel" method="onSpinPressed"]
+[connection signal="spin0Ready" from="Background/SpinButton" to="DynamicReel0" method="trySpin"]
+[connection signal="spin1Ready" from="Background/SpinButton" to="DynamicReel1" method="trySpin"]
+[connection signal="spin2Ready" from="Background/SpinButton" to="DynamicReel2" method="trySpin"]
+[connection signal="spin3Ready" from="Background/SpinButton" to="DynamicReel3" method="trySpin"]
+[connection signal="spin4Ready" from="Background/SpinButton" to="DynamicReel4" method="trySpin"]
+[connection signal="doSpin" from="Background/BalanceLabel" to="Background/SpinButton" method="computeNextSpin"]
+[connection signal="spinDone" from="DynamicReel0" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel1" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel2" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel3" to="Background/SpinButton" method="onReelStopped"]
+[connection signal="spinDone" from="DynamicReel4" to="Background/SpinButton" method="onReelStopped"]

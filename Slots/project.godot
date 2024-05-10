@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Slots"
+run/main_scene="res://2DSlotPlayfield.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+config/icon="res://cards0000.png"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/mjpeg_quality=0.85
+movie_writer/movie_file="C:/Users/lvachon/Documents/Godot/Slots/Output/demo.avi"
+
+[rendering]
+
+renderer/rendering_method="mobile"

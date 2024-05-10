@@ -1,0 +1,1361 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3btttp6t2weo"]
+
+[ext_resource type="Texture2D" uid="uid://j7n33yl5pphl" path="res://allcards-0.png" id="1_qp5dq"]
+[ext_resource type="Script" path="res://PayHelpSprite.gd" id="2_m8map"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 867.0
+offset_bottom = 617.0
+
+[node name="Hpanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 32.0
+offset_right = 282.0
+offset_bottom = 164.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(22.9861, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(53.1991, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(83.1852, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Eq" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 61.0
+text = "3"
+
+[node name="Prize" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 37.0
+offset_right = 188.0
+offset_bottom = 60.0
+text = "="
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(22.9861, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(53.1991, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(83.1852, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(113.185, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Eq2" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 67.0
+offset_right = 244.0
+offset_bottom = 90.0
+text = "20"
+
+[node name="Prize2" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 66.0
+offset_right = 188.0
+offset_bottom = 89.0
+text = "="
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(22.9861, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(53.1991, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D13" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(83.1852, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(113.185, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="Panel/Hpanel"]
+position = Vector2(143.199, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+script = ExtResource("2_m8map")
+switcher = true
+
+[node name="Eq3" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 98.0
+offset_right = 244.0
+offset_bottom = 121.0
+text = "100"
+
+[node name="Prize3" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 97.0
+offset_right = 188.0
+offset_bottom = 120.0
+text = "="
+
+[node name="Label" type="Label" parent="Panel/Hpanel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 33.0
+text = "Hydrogen / Lithium"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Opanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 32.0
+offset_right = 557.0
+offset_bottom = 164.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(22.9861, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(53.1991, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(83.1852, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Eq" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 61.0
+text = "10"
+
+[node name="Prize" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 37.0
+offset_right = 188.0
+offset_bottom = 60.0
+text = "="
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(22.9861, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(53.1991, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(83.1852, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(113.185, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Eq2" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 67.0
+offset_right = 244.0
+offset_bottom = 90.0
+text = "50"
+
+[node name="Prize2" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 66.0
+offset_right = 188.0
+offset_bottom = 89.0
+text = "="
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(22.9861, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(53.1991, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D13" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(83.1852, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D14" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(113.185, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Sprite2D15" type="Sprite2D" parent="Panel/Opanel"]
+position = Vector2(143.199, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 30
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 1
+altY = 9
+
+[node name="Eq3" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 98.0
+offset_right = 244.0
+offset_bottom = 121.0
+text = "250"
+
+[node name="Prize3" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 97.0
+offset_right = 188.0
+offset_bottom = 120.0
+text = "="
+
+[node name="Label" type="Label" parent="Panel/Opanel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 33.0
+text = "Oxygen / Sulfur"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cpanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 32.0
+offset_right = 834.0
+offset_bottom = 164.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(22.9861, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(53.1991, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(83.1852, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Eq" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 61.0
+text = "15"
+
+[node name="Prize" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 37.0
+offset_right = 188.0
+offset_bottom = 60.0
+text = "="
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(22.9861, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(53.1991, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(83.1852, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(113.185, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Eq2" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 67.0
+offset_right = 244.0
+offset_bottom = 90.0
+text = "100"
+
+[node name="Prize2" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 66.0
+offset_right = 188.0
+offset_bottom = 89.0
+text = "="
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(22.9861, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(53.1991, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D13" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(83.1852, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D14" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(113.185, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Sprite2D15" type="Sprite2D" parent="Panel/Cpanel"]
+position = Vector2(143.199, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 60
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 2
+altY = 10
+
+[node name="Eq3" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 98.0
+offset_right = 244.0
+offset_bottom = 121.0
+text = "300"
+
+[node name="Prize3" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 97.0
+offset_right = 188.0
+offset_bottom = 120.0
+text = "="
+
+[node name="Label" type="Label" parent="Panel/Cpanel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 33.0
+text = "Carbon / Lead"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CuPanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 191.0
+offset_right = 282.0
+offset_bottom = 323.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(22.9861, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(53.1991, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(83.1852, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Eq" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 61.0
+text = "30"
+
+[node name="Prize" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 37.0
+offset_right = 188.0
+offset_bottom = 60.0
+text = "="
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(22.9861, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(53.1991, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(83.1852, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(113.185, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Eq2" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 67.0
+offset_right = 244.0
+offset_bottom = 90.0
+text = "250"
+
+[node name="Prize2" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 66.0
+offset_right = 188.0
+offset_bottom = 89.0
+text = "="
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(22.9861, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(53.1991, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D13" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(83.1852, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D14" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(113.185, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Sprite2D15" type="Sprite2D" parent="Panel/CuPanel"]
+position = Vector2(143.199, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 90
+script = ExtResource("2_m8map")
+switcher = true
+defaultY = 3
+altY = 11
+
+[node name="Eq3" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 98.0
+offset_right = 244.0
+offset_bottom = 121.0
+text = "500"
+
+[node name="Prize3" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 97.0
+offset_right = 188.0
+offset_bottom = 120.0
+text = "="
+
+[node name="Label" type="Label" parent="Panel/CuPanel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 33.0
+text = "Copper / Iodine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AgPanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 191.0
+offset_right = 557.0
+offset_bottom = 323.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(22.9861, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(53.1991, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(83.1852, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Eq" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 61.0
+text = "40"
+
+[node name="Prize" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 37.0
+offset_right = 188.0
+offset_bottom = 60.0
+text = "="
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(22.9861, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(53.1991, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(83.1852, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(113.185, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Eq2" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 67.0
+offset_right = 244.0
+offset_bottom = 90.0
+text = "300"
+
+[node name="Prize2" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 66.0
+offset_right = 188.0
+offset_bottom = 89.0
+text = "="
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(22.9861, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(53.1991, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D13" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(83.1852, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D14" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(113.185, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Sprite2D15" type="Sprite2D" parent="Panel/AgPanel"]
+position = Vector2(143.199, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 120
+
+[node name="Eq3" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 98.0
+offset_right = 244.0
+offset_bottom = 121.0
+text = "1000"
+
+[node name="Prize3" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 97.0
+offset_right = 188.0
+offset_bottom = 120.0
+text = "="
+
+[node name="Label" type="Label" parent="Panel/AgPanel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 33.0
+text = "Silver"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AuPanel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 191.0
+offset_right = 834.0
+offset_bottom = 323.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(22.9861, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(53.1991, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(83.1852, 49.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Eq" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 38.0
+offset_right = 244.0
+offset_bottom = 61.0
+text = "50"
+
+[node name="Prize" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 37.0
+offset_right = 188.0
+offset_bottom = 60.0
+text = "="
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(22.9861, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(53.1991, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(83.1852, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(113.185, 78.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Eq2" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 67.0
+offset_right = 244.0
+offset_bottom = 90.0
+text = "500"
+
+[node name="Prize2" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 66.0
+offset_right = 188.0
+offset_bottom = 89.0
+text = "="
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(22.9861, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(53.1991, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D13" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(83.1852, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D14" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(113.185, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Sprite2D15" type="Sprite2D" parent="Panel/AuPanel"]
+position = Vector2(143.199, 109.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 150
+
+[node name="Eq3" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 98.0
+offset_right = 244.0
+offset_bottom = 121.0
+text = "10000"
+
+[node name="Prize3" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 97.0
+offset_right = 188.0
+offset_bottom = 120.0
+text = "="
+
+[node name="Label" type="Label" parent="Panel/AuPanel"]
+layout_mode = 0
+offset_right = 255.0
+offset_bottom = 33.0
+text = "Gold"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Instructions Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 387.0
+offset_right = 835.0
+offset_bottom = 536.0
+
+[node name="Label" type="Label" parent="Panel/Instructions Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 388.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 20
+text = "Minimum bet: 25 (5 credits x 5 lines) 
+All lines are played every round"
+
+[node name="Label3" type="Label" parent="Panel/Instructions Panel"]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 13.0
+offset_right = 786.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 20
+text = "Maximum bet: 400 (80 credits x 5 lines)
+Prize is multiplied by that line's bet"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Panel/Instructions Panel"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 91.0
+offset_right = 769.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 21
+text = "is wild and will be substituted for a winning symbol when possible"
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/Instructions Panel"]
+position = Vector2(68, 105)
+scale = Vector2(0.232408, 0.232408)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 180
+
+[node name="Label4" type="Label" parent="Panel/Instructions Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 202.0
+offset_right = 146.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 10
+text = "Copyright 2024, Luc Vachon"
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 332.0
+offset_right = 834.0
+offset_bottom = 376.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(28.9861, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(59.1991, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D3" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(89.1852, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Eq" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 11.0
+offset_right = 235.0
+offset_bottom = 34.0
+text = "5 Free Games"
+
+[node name="Prize" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 10.0
+offset_right = 122.0
+offset_bottom = 33.0
+text = "="
+
+[node name="Sprite2D4" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(268.986, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D5" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(299.199, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D6" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(329.185, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D7" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(359, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Eq2" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 11.0
+offset_right = 507.0
+offset_bottom = 34.0
+text = "10 Free Games"
+
+[node name="Prize2" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 10.0
+offset_right = 390.0
+offset_bottom = 33.0
+text = "="
+
+[node name="Sprite2D8" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(531.986, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D9" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(562.199, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D10" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(592.185, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D11" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(622, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Sprite2D12" type="Sprite2D" parent="Panel/Panel"]
+position = Vector2(652, 22.25)
+scale = Vector2(0.0722223, 0.0722223)
+texture = ExtResource("1_qp5dq")
+hframes = 30
+vframes = 12
+frame = 210
+script = ExtResource("2_m8map")
+defaultY = 7
+altY = 11
+
+[node name="Eq3" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 11.0
+offset_right = 796.0
+offset_bottom = 34.0
+text = "25 Free Games"
+
+[node name="Prize3" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 10.0
+offset_right = 680.0
+offset_bottom = 33.0
+text = "="
